@@ -9,7 +9,10 @@ var timer = setInterval(countdown, 1000);
 function countdown() {
     if (tempoTotale == -1) {
         clearTimeout(timer);
-        parseInt(prompt("Inserisci i numeri precedenti"))
+       var numeri = parseInt(prompt("Inserisci i numeri precedenti"))
+
+       numeriCorrettiUtente.push(numeri)
+
         
     } else {
         clock.innerHTML = tempoTotale;
@@ -47,3 +50,6 @@ function arrayUguali(numeriRandom, numeriCorrettiUtente) {
 
     return true;
 }
+
+console.log(numeriRandom)
+console.log(numeriCorrettiUtente)
