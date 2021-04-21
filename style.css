@@ -1,0 +1,15 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Michroma', sans-serif;
+    color: darkred;
+    text-align: center;
+}
+
+.container{
+    border: 6px solid black;
+    border-radius: 5px;
+    width: 80px;
+    margin: 50px;
+}
+

@@ -2,6 +2,22 @@ var numeriRandom = []
 var numeriCorrettiUtente = []
 var numeriErratiUtente = []
 
+var tempoTotale = 30;
+var clock = document.getElementById("death-clock");
+var timer = setInterval(countdown, 1000);
+
+function countdown() {
+    if (tempoTotale == -1) {
+        clearTimeout(timer);
+        
+    } else {
+        clock.innerHTML = tempoTotale;
+        tempoTotale--;
+    }
+
+}
+
+
 
 while(numeriRandom.length < 5){
 
@@ -11,3 +27,5 @@ while(numeriRandom.length < 5){
 }
 
 alert("Simon says:  " + numeriRandom);
+
+
