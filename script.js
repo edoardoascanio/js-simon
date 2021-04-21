@@ -20,7 +20,7 @@ function countdown() {
 
 while(numeriRandom.length < 5){
 
-    var i = Math.floor(Math.random() * 100) + 1;
+    var i = Math.floor(Math.random() * 10) + 1;
 
     if(numeriRandom.indexOf(i) === -1) numeriRandom.push(i);
 }
@@ -28,3 +28,22 @@ while(numeriRandom.length < 5){
 alert("Simon says:  " + numeriRandom);
 
 
+function arrayUguali(numeriRandom, numeriCorrettiUtente) {
+
+    if (!Array.isArray(numeriRandom) || ! Array.isArray(numeriCorrettiUtente) || numeriRandom.length !== numeriCorrettiUtente.length)
+      return false;
+
+    var numeriRandom = numeriRandom.concat().sort();
+    var numeriCorrettiUtente = numeriCorrettiUtente.concat().sort();
+
+    for (var i = 0; i < numeriRandom.length; i++) {
+
+        if (numeriRandom[i] !== numeriCorrettiUtente[i]){
+            return false;
+        }else{
+            alert("Hai Vinto!")
+        }          
+    }
+
+    return true;
+}
