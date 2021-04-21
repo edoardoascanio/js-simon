@@ -9,14 +9,13 @@ var timer = setInterval(countdown, 1000);
 function countdown() {
     if (tempoTotale == -1) {
         clearTimeout(timer);
+        parseInt(prompt("Inserisci i numeri precedenti"))
         
     } else {
         clock.innerHTML = tempoTotale;
         tempoTotale--;
     }
-
 }
-
 
 
 while(numeriRandom.length < 5){
